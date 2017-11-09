@@ -13,7 +13,8 @@ import {
   Slide,
   Text,
   Image,
-  Appear
+  Appear,
+  CodePane
 } from "spectacle";
 
 // Import image preloader util
@@ -21,6 +22,7 @@ import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+import { request } from "https";
 
 // Require CSS
 require("normalize.css");
@@ -32,7 +34,9 @@ const images = {
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
   markdown: require("../assets/markdown.png"),
-  twit: require("../assets/twit.png")
+  twit: require("../assets/twit.png"),
+  reactOrigin: require("../assets/reactwtf.png"),
+  what: require("../assets/what.gif")
 };
 
 preloader(images);
@@ -101,29 +105,51 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
+        <Slide bgColor="white">
+          <Heading fir>
+            Сразу к делу, реакт:
+          </Heading>
+          <Appear>
+            <Image src={images.reactOrigin.replace("/", "")} />
+          </Appear>
+          <Appear>
+            <Image src={images.what.replace("/", "")} />
+          </Appear>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
+        <Slide >
+          <Heading fit textColor="blue">
+            JSX
+          </Heading>
+          <Appear>
+            <Heading>
+              ESNext (6,7,...)
+            </Heading>
+          </Appear>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+        <Slide>
+          <CodePane lang="jsx"
+            source={require("raw-loader!../assets/jsx.example")}
+            margin="20px auto"
+            overflow = "overflow"
+            textSize="22px"
+          />
+          <Appear>
+            <CodePane lang="jsx"
+              source={require("raw-loader!../assets/jsx_functional.example")}
+              margin="20px auto"
+              overflow = "overflow"
+              textSize="22px"
+            />
+          </Appear>
+        </Slide>
+        <Slide>
+          <Heading size={3} textColor="blue">Как на самом деле</Heading>
+          <CodePane lang="jsx"
+            source={require("raw-loader!../assets/real_world.example")}
+            margin="20px auto"
+            overflow="overflow"
+            textSize="24px"
+          />
         </Slide>
       </Deck>
     );
