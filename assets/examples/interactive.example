@@ -1,0 +1,34 @@
+export default class Interactive extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { count: 0 }
+    this.handleClick = this.handleClick.bind(this)
+    this.handleRestart = this.handleRestart.bind(this)
+  }
+  handleClick() {
+    this.setState({ count: this.state.count + 1 })
+  }
+  handleRestart() {
+    this.setState({ count: 0 })
+  }
+  render() {
+    return (
+      <div>
+        {this.state.count < 5 ?
+          this.state.count === 0 ?
+            <div>
+              <Heading> Жми скорей! </Heading>
+              <button onClick={this.handleClick}>Кликай!</button>
+            </div> :
+            <div>
+              <Heading> Вы нажали {this.state.count} раз, слабо еще? </Heading>
+              <button onClick={this.handleClick}>Кликай!</button>
+            </div> :
+          <div>
+            <Heading>Технический перерыв</Heading>
+            <button onClick={this.handleRestart}>restart</button>
+          </div> }
+      </div>
+    )
+  }
+}

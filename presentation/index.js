@@ -24,30 +24,36 @@ import preloader from "spectacle/lib/utils/preloader";
 import createTheme from "spectacle/lib/themes/default";
 import { request } from "https";
 
+//Import React Components
+import PropsPower from "../assets/intercative/PropsPower";
+import Interactive from "../assets/intercative/interactive";
+
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png"),
-  twit: require("../assets/twit.png"),
-  reactOrigin: require("../assets/reactwtf.png"),
-  what: require("../assets/what.gif")
+  city: require("../assets/images/city.jpg"),
+  kat: require("../assets/images/kat.png"),
+  logo: require("../assets/images/formidable-logo.svg"),
+  markdown: require("../assets/images/markdown.png"),
+  twit: require("../assets/images/twit.png"),
+  reactOrigin: require("../assets/images/reactwtf.png"),
+  what: require("../assets/images/what.gif"),
+  waitwhat: require("../assets/images/waitwhat.gif"),
+  howlong: require("../assets/images/howlong.gif")
 };
 
 preloader(images);
 
 const theme = createTheme({
   primary: "cornsilk",
-  secondary: "mediumgreen",
+  secondary: "mediumseagreen",
   tertiary: "#03A9FC",
   quartenary: "#CECECE",
   blue: "mediumblue",
-  green: "mediumgreen",
+  green: "mediumseagreen",
   black: "black",
   white: "white"
 }, {
@@ -74,7 +80,7 @@ export default class Presentation extends React.Component {
           <Heading fit textColor="blue">
             Что такое реакт
           </Heading>
-          <List textColor="secondary">
+          <List textColor="black">
             <Appear>
               <ListItem margin="20px 0 0">Javascript библиотека для проектирования UI</ListItem>
             </Appear>
@@ -128,28 +134,76 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <CodePane lang="jsx"
-            source={require("raw-loader!../assets/jsx.example")}
+            source={require("raw-loader!../assets/examples/jsx.example")}
             margin="20px auto"
             overflow = "overflow"
             textSize="22px"
           />
           <Appear>
             <CodePane lang="jsx"
-              source={require("raw-loader!../assets/jsx_functional.example")}
+              source={require("raw-loader!../assets/examples/jsx_functional.example")}
               margin="20px auto"
               overflow = "overflow"
               textSize="22px"
             />
           </Appear>
         </Slide>
-        <Slide>
+        <Slide maxHeight="1000">
           <Heading size={3} textColor="blue">Как на самом деле</Heading>
           <CodePane lang="jsx"
-            source={require("raw-loader!../assets/real_world.example")}
+            source={require("raw-loader!../assets/examples/real_world.example")}
             margin="20px auto"
             overflow="overflow"
             textSize="24px"
           />
+        </Slide>
+        <Slide>
+          <Image src={images.waitwhat.replace("/", "")} />
+        </Slide>
+        <Slide bgColor="secondary">
+          <BlockQuote>
+            <Quote textColor="white" textSize="24px" lineHeight={2} italic bold="false" textFont="secondary">
+                Templates encourage a poor separation of concerns. "View Model" tightly couples a template to display logic. Display logic and markup are inevitably tightly coupled. Templates separate technologies, not concerns.
+                React components are "...a highly cohesive building block for UIs loosely coupled with other components."
+            </Quote>
+            <Cite textColor="blue">Какой-то чувак из React Dev Team</Cite>
+          </BlockQuote>
+        </Slide>
+        <Slide>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../assets/examples/PropsPower.example")}
+            margin="20px auto"
+            overflow="overflow"
+            textSize="18px"
+          />
+        </Slide>
+        <Slide bgColor="blue">
+          <PropsPower/>
+        </Slide>
+        <Slide bgColor="blue">
+          <PropsPower multy="true" />
+        </Slide>
+        <Slide bgColor="blue">
+          <Heading caps size={3} textColor="primary">Интерактивность!</Heading>
+          <Image src={images.howlong.replace("/", "")} />
+        </Slide>
+        <Slide>
+          <Interactive/>
+        </Slide>
+        <Slide>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../assets/examples/interactive.example")}
+          />
+        </Slide>
+        <Slide bgColor="blue">
+          <Heading>State</Heading>
+          <List textColor="white">
+            <ListItem>Стейт чать класса</ListItem>
+            <ListItem>Стейт обновляется только с помощью .setState({})</ListItem>
+            <ListItem>Каждое обновление стейта запускает ре-рендер и оповещает всех подписчиков</ListItem>
+          </List>
         </Slide>
       </Deck>
     );

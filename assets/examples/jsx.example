@@ -1,0 +1,10 @@
+...
+class HelloTimepad extends Component {
+  render() {
+    return
+      <div>
+        Hello Timepad!
+      </div>
+  }
+}
+...
