@@ -1,0 +1,16 @@
+/* page.css */
+.normal   { /*all styles*/ }
+.centered { 
+  composes: normal;
+  /* styles */
+}
+.reversed {
+  composes: colors from "../shared/colors.css"
+}
+
+/* page.js */
+import styles from 'page.css';
+
+<div class={styles.reversed}>
+  ...more...
+</div>

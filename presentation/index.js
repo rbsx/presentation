@@ -14,7 +14,10 @@ import {
   Text,
   Image,
   Appear,
-  CodePane
+  CodePane,
+  Fill,
+  Layout,
+  Fit
 } from "spectacle";
 
 // Import image preloader util
@@ -30,7 +33,6 @@ import Interactive from "../assets/intercative/interactive";
 
 // Require CSS
 require("normalize.css");
-require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
@@ -42,7 +44,13 @@ const images = {
   reactOrigin: require("../assets/images/reactwtf.png"),
   what: require("../assets/images/what.gif"),
   waitwhat: require("../assets/images/waitwhat.gif"),
-  howlong: require("../assets/images/howlong.gif")
+  howlong: require("../assets/images/howlong.gif"),
+  events: require("../assets/images/events.png"),
+  state1: require("../assets/images/state1.gif"),
+  state2: require("../assets/images/state2.gif"),
+  state3: require("../assets/images/state3.gif"),
+  redux1: require("../assets/images/redux1.gif"),
+  reduxp: require("../assets/images/reduxp.png")
 };
 
 preloader(images);
@@ -55,7 +63,8 @@ const theme = createTheme({
   blue: "mediumblue",
   green: "mediumseagreen",
   black: "black",
-  white: "white"
+  white: "white",
+  redux: "#764abc"
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
@@ -198,6 +207,33 @@ export default class Presentation extends React.Component {
           />
         </Slide>
         <Slide bgColor="blue">
+          <Image src={images.events} />
+        </Slide>
+        <Slide bgColor="black">
+          <Heading textColor="white" fit>Лучшие практики</Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../assets/examples/Components.example")}
+          />
+        </Slide>
+        <Slide>
+          <Heading fit>HOC</Heading>
+          <Heading fit>Render Props</Heading>
+          <Heading fit>Decorators</Heading>
+          <Heading fit>Mixins</Heading>
+        </Slide>
+        <Slide bgColor="green">
+          <Heading textColor="blue" size={3} margin="-80px 0 0 0">ЖЦ компонента</Heading>
+          <List textColor="white" >
+            <ListItem>componentWillMount (Constructor) — выполняется перед первым рендером</ListItem>
+            <ListItem>componentDidMount — после рендера</ListItem>
+            <ListItem>componentWillReceiveProps — при получении новых props </ListItem>
+            <ListItem>shouldComponentUpdate — перед рендером, получает новые и старые стейт и пропс, решает рендерить ли компонент</ListItem>
+            <ListItem>componentDidUpdate — компонент обновился/перерендерился</ListItem>
+            <ListItem>componentWillUnmount — перед удалением компонента из DOM</ListItem>
+          </List>
+        </Slide>
+        <Slide bgColor="blue">
           <Heading>State</Heading>
           <List textColor="white">
             <ListItem>Стейт чать класса</ListItem>
@@ -205,7 +241,148 @@ export default class Presentation extends React.Component {
             <ListItem>Каждое обновление стейта запускает ре-рендер и оповещает всех подписчиков</ListItem>
           </List>
         </Slide>
+        <Slide bgColor="white">
+          <Heading textColor="black" size={3} margin="-20px auto 0">Стандартное распространение стейта</Heading>
+          <Image src={images.state1.replace("/", "")} />
+        </Slide>
+        <Slide bgColor="white">
+          <Heading textColor="black" size={3}>Стандартное распространение стейта</Heading>
+          <Image src={images.state2.replace("/", "")} />
+        </Slide>
+        <Slide bgColor="white">
+          <Heading textColor="black" size={3}>А потом...ting goes skrraa</Heading>
+          <Text textAlign="right" textSize="15px" italic>© Big Shaq</Text>
+          <Image src={images.state3.replace("/", "")} />
+        </Slide>
+        <Slide bgColor="tertiary">
+          <Heading textColor="redux" fit>Redux</Heading>
+        </Slide>
+        <Slide bgColor="white">
+          <Heading textColor="black" size={3}>Держим стейт под контролем</Heading>
+          <Image src={images.redux1.replace("/", "")} />
+        </Slide>
+        <Slide bgColor="white">
+          <Heading textColor="redux" size={4}>Схема работы редакса</Heading>
+          <Image src={images.reduxp.replace("/", "")} />
+        </Slide>
+        <Slide bgColor="redux">
+          <Heading textColor="white" size={4}>Основные принципы</Heading>
+          <List lineHeight={3}>
+            <ListItem>Все состояние хренится в одном месте—сторе</ListItem>
+            <ListItem>Состояние нельзя менят напрямую</ListItem>
+            <ListItem>Экшены обрабатываются чистой функцией—редьюсером</ListItem>
+          </List>
+        </Slide>
+        <Slide bgColor="redux">
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/examples/Redux.example")}
+            margin="-140px auto 0"
+            textSize="1rem"
+          />
+        </Slide>
+        <Slide bgColor="white" notes="в этой схеме сайд-эффектам нет места. Единственное место, где происходят изменения — это редьюсер, а он обязан быть чистой функцией. Мидлвейр находится между кодом, который диспатчит экшены (то есть генерирует события) и редьюсером (то есть функцией, которая их преобразует в новое состояние), пропускает через себя все возникающие экшены, меняет их (если считает нужным) и отправляет дальше — или не отправляет. Особенность мидлвейра в том, что он быть чистой функцией не обязан — и поэтому он может делать сайд-эффекты вроде запросов на сервер или чего угодно.">
+          <Heading fit>Когда нельзя быть таким чистым</Heading>
+          <Appear>
+            <Heading textColor="green" fit>Мидлвеир</Heading>
+          </Appear>
+          <Appear>
+            <List textColor="redux">
+              <ListItem>redux-thunk</ListItem>
+              <ListItem>redux-saga</ListItem>
+            </List>
+          </Appear>
+        </Slide>
+        <Slide>
+          <Heading textColor="green" margin="auto auto 20px">Что по стилям</Heading>
+          <Layout>
+            <Fill>
+              <CodePane
+                lang="js"
+                source={require("raw-loader!../assets/examples/Css.example")}
+                style={{ minWidth: "none" }}
+              />
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide>
+          <Heading textColor="green" margin="auto auto 20px">Что по стилям</Heading>
+          <Layout>
+            <Fill>
+              <CodePane
+                lang="js"
+                source={require("raw-loader!../assets/examples/Styled.example")}
+              />
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide bgColor="green">
+          <Heading textColor="blue" margin="auto auto 20px">Как собирать</Heading>
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/examples/Webpack.example")}
+          />
+        </Slide>
+        <Slide bgColor="white">
+          <Heading textColor="redux" margin="auto auto 20px">Если легаси дороже</Heading>
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/examples/Gulp.example")}
+          />
+        </Slide>
+        <Slide bgColor="redux">
+          <Heading fit >
+            Плюсы
+          </Heading>
+          <List textColor="white">
+            <Appear>
+              <ListItem>Tree-shaking</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Code-spliting</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>All-in-one place</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Перспективы</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide bgColor="black">
+          <Layout >
+            <Heading fit>Create-</Heading>
+            <Heading fit>react-</Heading>
+            <Heading fit>app</Heading>
+          </Layout>
+        </Slide>
+        <Slide>
+          <Heading textColor="redux" fit>Инструменты,</Heading>
+          <Heading textColor="redux" fit>помогающие в разработке</Heading>
+          <List textColor="blue">
+            <Appear>
+              <ListItem>Webpack</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Babel</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>ESLint</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Flow</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide bgColor="white">
+          <Heading textColor="redux" margin="auto auto 20px">Flow</Heading>
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/examples/Flow.example")}
+          />
+        </Slide>
       </Deck>
     );
   }
 }
+

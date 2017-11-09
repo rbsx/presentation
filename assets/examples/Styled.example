@@ -1,0 +1,18 @@
+import styled from 'styled-components';
+import Color from 'color';
+
+const Button = styled.button`
+  min-width: 6em;
+  opacity: ${props => (props.disabled ? '.5' : '1')};
+  &:hover, &:focus {
+      background-color: ${props => (props.primary ? '#80AC3E' : '#E6E6E6')};
+  }
+`;
+
+const darkenColor = color => amount => Color(color).darken(amount).toString();
+const darkenTomato = darkenColor('#FF6347');
+const TomatoButton = styled(Button)`
+  color: white;
+  background-color: #ff6347;
+  border-bottom: 0.25em solid ${darkenTomato(0.3)};
+`;
