@@ -52,7 +52,8 @@ const images = {
   redux1: require("../assets/images/redux1.gif"),
   reduxp: require("../assets/images/reduxp.png"),
   storybook: require("../assets/images/storybook.gif"),
-  storybookAirbnb: require("../assets/images/storybookAirbnb.png")
+  storybookAirbnb: require("../assets/images/storybookAirbnb.png"),
+  jamesSaidOk: require("../assets/images/ok.gif")
 };
 
 preloader(images);
@@ -443,7 +444,7 @@ export default class Presentation extends React.Component {
           <Image src={images.storybook.replace("/", "")} />
         </Slide>
         <Slide bgColor="white">
-          <Image src={images.storybookAirbnb.replace("/", "")} />
+          <Image margin="-80px auto auto" src={images.storybookAirbnb.replace("/", "")} />
         </Slide>
         <Slide bgColor="green">
           <Heading textColor="white" margin="auto auto 20px">⭐️ 80k+</Heading>
@@ -461,6 +462,9 @@ export default class Presentation extends React.Component {
           <Heading textColor="redux" margin="auto auto 20px">BBC</Heading>
           <Heading textColor="redux" margin="auto auto 20px">Instagram</Heading>
           <Heading textColor="redux" margin="auto auto 20px">Twitter Mobile</Heading>
+        </Slide>
+        <Slide bgColor="blue">
+          <Image src={images.jamesSaidOk.replace("/", "")} />
         </Slide>
       </Deck>
     );
