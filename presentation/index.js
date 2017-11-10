@@ -50,7 +50,9 @@ const images = {
   state2: require("../assets/images/state2.gif"),
   state3: require("../assets/images/state3.gif"),
   redux1: require("../assets/images/redux1.gif"),
-  reduxp: require("../assets/images/reduxp.png")
+  reduxp: require("../assets/images/reduxp.png"),
+  storybook: require("../assets/images/storybook.gif"),
+  storybookAirbnb: require("../assets/images/storybookAirbnb.png")
 };
 
 preloader(images);
@@ -330,6 +332,43 @@ export default class Presentation extends React.Component {
             source={require("raw-loader!../assets/examples/Gulp.example")}
           />
         </Slide>
+        <Slide bgColor="white">
+          <Heading textColor="redux" margin="auto auto 20px">Никакого Вебпака!</Heading>
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/examples/GulpBabel.example")}
+          />
+        </Slide>
+        <Slide bgColor="white">
+          <Heading textColor="redux" margin="auto auto 20px">Проблемы</Heading>
+          <List textColor="blue">
+            <Appear>
+              <ListItem>Конкатенация модулей</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Сохранение порядка</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Медленная разработка</ListItem>
+            </Appear>
+          </List>
+          <Appear>
+            <div>
+              <Heading textColor="redux" margin="auto auto 20px">Плюсы</Heading>
+              <List textColor="green">
+                <Appear>
+                  <ListItem>Легко интегрировать</ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>Не надо трогать CSS</ListItem>
+                </Appear>
+                <Appear>
+                  <ListItem>Уже знакомо</ListItem>
+                </Appear>
+              </List>
+            </div>
+          </Appear>
+        </Slide>
         <Slide bgColor="redux">
           <Heading fit >
             Плюсы
@@ -380,6 +419,48 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require("raw-loader!../assets/examples/Flow.example")}
           />
+        </Slide>
+        <Slide>
+          <Heading textColor="redux" fit>Инструменты,</Heading>
+          <Heading textColor="redux" fit>помогающие продукту</Heading>
+          <List textColor="blue">
+            <Appear>
+              <ListItem>Serverside-rendering</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Storybook</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Различные error-handler-ы</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Большое комьюнити</ListItem>
+            </Appear>
+          </List>
+        </Slide>        
+        <Slide bgColor="blue">
+          <Heading textColor="white" margin="auto auto 20px">Storybook</Heading>
+          <Image src={images.storybook.replace("/", "")} />
+        </Slide>
+        <Slide bgColor="white">
+          <Image src={images.storybookAirbnb.replace("/", "")} />
+        </Slide>
+        <Slide bgColor="green">
+          <Heading textColor="white" margin="auto auto 20px">⭐️ 80k+</Heading>
+          <Heading textColor="white" margin="auto auto 20px">👤 1k+</Heading>
+          <Heading textColor="white" margin="auto auto 20px">👩🏼‍🔧 3k 100⭐️</Heading>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading textColor="ternary" margin="auto auto 20px">16 версия</Heading>
+          <Heading textColor="white" margin="auto auto 20px">ни единого</Heading>
+          <Heading textColor="white" margin="auto auto 20px">разрыва</Heading>
+        </Slide>
+        <Slide bgColor="white">
+          <Heading textColor="redux" margin="auto auto 20px">Facebook</Heading>
+          <Heading textColor="redux" margin="auto auto 20px">Airbnb</Heading>
+          <Heading textColor="redux" margin="auto auto 20px">BBC</Heading>
+          <Heading textColor="redux" margin="auto auto 20px">Instagram</Heading>
+          <Heading textColor="redux" margin="auto auto 20px">Twitter Mobile</Heading>
         </Slide>
       </Deck>
     );
