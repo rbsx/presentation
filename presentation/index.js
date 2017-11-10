@@ -16,8 +16,7 @@ import {
   Appear,
   CodePane,
   Fill,
-  Layout,
-  Fit
+  Layout
 } from "spectacle";
 
 // Import image preloader util
@@ -25,7 +24,6 @@ import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
-import { request } from "https";
 
 //Import React Components
 import PropsPower from "../assets/intercative/PropsPower";
@@ -376,6 +374,9 @@ export default class Presentation extends React.Component {
           </Heading>
           <List textColor="white">
             <Appear>
+              <ListItem>Modules</ListItem>
+            </Appear>
+            <Appear>
               <ListItem>Tree-shaking</ListItem>
             </Appear>
             <Appear>
@@ -419,6 +420,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/examples/Flow.example")}
+            textSize="2rem"
           />
         </Slide>
         <Slide>
@@ -438,7 +440,7 @@ export default class Presentation extends React.Component {
               <ListItem>Большое комьюнити</ListItem>
             </Appear>
           </List>
-        </Slide>        
+        </Slide>
         <Slide bgColor="blue">
           <Heading textColor="white" margin="auto auto 20px">Storybook</Heading>
           <Image src={images.storybook.replace("/", "")} />
@@ -446,7 +448,7 @@ export default class Presentation extends React.Component {
         <Slide bgColor="white">
           <Image margin="-80px auto auto" src={images.storybookAirbnb.replace("/", "")} />
         </Slide>
-        <Slide bgColor="green">
+        <Slide bgColor="green" note="у джиквери 1,685репозиториев больше 100 ">
           <Heading textColor="white" margin="auto auto 20px">⭐️ 80k+</Heading>
           <Heading textColor="white" margin="auto auto 20px">👤 1k+</Heading>
           <Heading textColor="white" margin="auto auto 20px">👩🏼‍🔧 3k 100⭐️</Heading>

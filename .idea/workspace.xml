@@ -2,23 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="734c5974-b88b-418d-885c-a605e39ea27c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/examples/PropsPower.example" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/waitwhat.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/what.gif" />
-      <change beforePath="$PROJECT_DIR$/assets/city.jpg" afterPath="$PROJECT_DIR$/assets/images/city.jpg" />
-      <change beforePath="$PROJECT_DIR$/assets/deck.example" afterPath="$PROJECT_DIR$/assets/examples/deck.example" />
-      <change beforePath="$PROJECT_DIR$/assets/formidable-logo.svg" afterPath="$PROJECT_DIR$/assets/images/formidable-logo.svg" />
-      <change beforePath="$PROJECT_DIR$/assets/interactive.js" afterPath="$PROJECT_DIR$/assets/intercative/interactive.js" />
-      <change beforePath="$PROJECT_DIR$/assets/jsx.example" afterPath="$PROJECT_DIR$/assets/examples/jsx.example" />
-      <change beforePath="$PROJECT_DIR$/assets/jsx_functional.example" afterPath="$PROJECT_DIR$/assets/examples/jsx_functional.example" />
-      <change beforePath="$PROJECT_DIR$/assets/kat.png" afterPath="$PROJECT_DIR$/assets/images/kat.png" />
-      <change beforePath="$PROJECT_DIR$/assets/markdown.png" afterPath="$PROJECT_DIR$/assets/images/markdown.png" />
-      <change beforePath="$PROJECT_DIR$/assets/reactwtf.png" afterPath="$PROJECT_DIR$/assets/images/reactwtf.png" />
-      <change beforePath="$PROJECT_DIR$/assets/real_world.example" afterPath="$PROJECT_DIR$/assets/examples/real_world.example" />
-      <change beforePath="$PROJECT_DIR$/assets/twit.png" afterPath="$PROJECT_DIR$/assets/images/twit.png" />
-      <change beforePath="$PROJECT_DIR$/assets/what.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change beforePath="$PROJECT_DIR$/presentation/index.js" afterPath="$PROJECT_DIR$/presentation/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -42,29 +25,24 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/presentation/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
-              <caret line="201" column="32" lean-forward="false" selection-start-line="201" selection-start-column="32" selection-end-line="201" selection-end-column="32" />
+            <state relative-caret-position="604">
+              <caret line="284" column="600" lean-forward="true" selection-start-line="284" selection-start-column="38" selection-end-line="284" selection-end-column="600" />
               <folding>
-                <element signature="e#74#219#0" expanded="true" />
-                <element signature="e#324#379#0" expanded="true" />
-                <element signature="e#440#498#0" expanded="true" />
-                <element signature="e#1604#1916#0" expanded="false" />
-                <element signature="e#1925#2020#0" expanded="false" />
-                <element signature="e#2029#2569#0" expanded="false" />
-                <element signature="e#2578#3178#0" expanded="false" />
-                <element signature="e#3187#3504#0" expanded="false" />
-                <element signature="e#3513#3731#0" expanded="false" />
-                <element signature="e#3740#4248#0" expanded="false" />
-                <element signature="e#4257#4587#0" expanded="false" />
-                <element signature="e#4596#4679#0" expanded="false" />
-                <element signature="e#4688#5336#0" expanded="false" />
-                <element signature="e#5345#5597#0" expanded="false" />
-                <element signature="e#5606#5669#0" expanded="false" />
-                <element signature="e#5678#5755#0" expanded="false" />
-                <element signature="e#5764#5941#0" expanded="false" />
-                <element signature="e#5950#5999#0" expanded="false" />
-                <element signature="e#6008#6170#0" expanded="false" />
+                <element signature="e#425#483#0" expanded="true" />
+                <element signature="e#604#1537#0" expanded="false" />
+                <element signature="e#1586#1795#0" expanded="false" />
+                <element signature="e#1797#1850#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="636">
+              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/assets/examples/PropsPower.example">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+              <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -103,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/assets/intercative/interactive.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="8">
-              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+              <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -115,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/assets/examples/interactive.example">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
-              <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+              <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -148,10 +126,16 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>spectacle-content</find>
+      <find>_goToSlide =</find>
+      <find>flow</find>
     </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/node_modules/spectacle-code-slide</dir>
+      <dir>$PROJECT_DIR$/node_modules/spectacle</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -168,6 +152,7 @@
         <option value="$PROJECT_DIR$/assets/intercative/PropsPower.js" />
         <option value="$PROJECT_DIR$/assets/intercative/interactive.js" />
         <option value="$PROJECT_DIR$/assets/examples/interactive.example" />
+        <option value="$PROJECT_DIR$/node_modules/spectacle/dist/spectacle.js" />
         <option value="$PROJECT_DIR$/presentation/index.js" />
       </list>
     </option>
@@ -209,6 +194,11 @@
           <expand>
             <path>
               <item name="presentation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="presentation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="presentation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="presentation" type="462c0819:PsiDirectoryNode" />
               <item name="presentation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -266,18 +256,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1510222066936</updated>
-      <workItem from="1510222068647" duration="12129000" />
+      <workItem from="1510222068647" duration="16061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12129000" />
+    <option name="totallyTimeSpent" value="16061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299539" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -323,7 +312,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -391,7 +380,7 @@
     <entry file="file://$PROJECT_DIR$/assets/examples/PropsPower.example">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -407,7 +396,7 @@
     <entry file="file://$PROJECT_DIR$/assets/examples/interactive.example">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -415,7 +404,7 @@
     <entry file="file://$PROJECT_DIR$/assets/intercative/interactive.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8">
-          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -430,30 +419,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/spectacle/lib/components/manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-825">
+          <caret line="439" column="2" lean-forward="false" selection-start-line="439" selection-start-column="2" selection-end-line="439" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/spectacle/dist/spectacle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="38103" column="31" lean-forward="true" selection-start-line="38103" selection-start-column="31" selection-end-line="38103" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/presentation/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="201" column="32" lean-forward="false" selection-start-line="201" selection-start-column="32" selection-end-line="201" selection-end-column="32" />
+        <state relative-caret-position="604">
+          <caret line="284" column="600" lean-forward="true" selection-start-line="284" selection-start-column="38" selection-end-line="284" selection-end-column="600" />
           <folding>
-            <element signature="e#74#219#0" expanded="true" />
-            <element signature="e#324#379#0" expanded="true" />
-            <element signature="e#440#498#0" expanded="true" />
-            <element signature="e#1604#1916#0" expanded="false" />
-            <element signature="e#1925#2020#0" expanded="false" />
-            <element signature="e#2029#2569#0" expanded="false" />
-            <element signature="e#2578#3178#0" expanded="false" />
-            <element signature="e#3187#3504#0" expanded="false" />
-            <element signature="e#3513#3731#0" expanded="false" />
-            <element signature="e#3740#4248#0" expanded="false" />
-            <element signature="e#4257#4587#0" expanded="false" />
-            <element signature="e#4596#4679#0" expanded="false" />
-            <element signature="e#4688#5336#0" expanded="false" />
-            <element signature="e#5345#5597#0" expanded="false" />
-            <element signature="e#5606#5669#0" expanded="false" />
-            <element signature="e#5678#5755#0" expanded="false" />
-            <element signature="e#5764#5941#0" expanded="false" />
-            <element signature="e#5950#5999#0" expanded="false" />
-            <element signature="e#6008#6170#0" expanded="false" />
+            <element signature="e#425#483#0" expanded="true" />
+            <element signature="e#604#1537#0" expanded="false" />
+            <element signature="e#1586#1795#0" expanded="false" />
+            <element signature="e#1797#1850#0" expanded="false" />
           </folding>
         </state>
       </provider>
